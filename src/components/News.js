@@ -112,7 +112,7 @@ async updateNews(){
     {this.state.loading && <Spinner/>}
         {/* map is a higher order array method */}
         <InfiniteScroll
-          dataLength={this.state.articles.length}
+          dataLength={this.state.articles ? this.state.articles.length : 0}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length !== this.state.totalResults}
           loader={<Spinner/>}
